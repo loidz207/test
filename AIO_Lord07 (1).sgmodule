@@ -1,0 +1,30 @@
+#!name=Locket Gold - Lord207
+#!desc=Được tối ưu hóa và tổng hợp bởi Lord207 (Chỉ giữ lại Locket Gold)
+#!author=lord207
+#!moduleUrl=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/Locket_Lord07.sgmodule
+#!icon=https://module-ios.netlify.app/assets/img/shadowrocket.webp
+#!howtouse=Shadowrocket
+#Shadowrocket Configuration - Locket Gold Only
+
+[Header Rewrite]
+^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag
+^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del X-RevenueCat-ETag
+
+[Script]
+#LocketGold
+#hostname = api.revenuecat.com, firebaseremoteconfig.googleapis.com
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/Locket_Lord207.js, requires-body=true, max-size=-1, timeout=60
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/deleteHeader.js, timeout=60
+locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a\/.+, script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/Locket_Unlocked.js, requires-body=true, max-size=-1, timeout=60
+#************************************#
+#RevenueCatVip
+
+#hostname = api.revenuecat.com
+
+RevenueCatVip = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/revenuecat.js, requires-body=true, max-size=-1, timeout=60
+
+#RevenueCatDeleteHeader = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/deleteHeader.js, timeout=60
+
+#************************************#
+[MITM]
+hostname = %APPEND%, api.revenuecat.com, firebaseremoteconfig.googleapis.com
