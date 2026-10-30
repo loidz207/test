@@ -13,17 +13,17 @@
 [Script]
 #LocketGold
 #hostname = api.revenuecat.com, firebaseremoteconfig.googleapis.com
-revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/Locket_Lord207.js, requires-body=true, max-size=-1, timeout=60
-deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/deleteHeader.js, timeout=60
-locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a\/.+, script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/Locket_Unlocked.js, requires-body=true, max-size=-1, timeout=60
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/loidz207/test/refs/heads/main/js/Locket_Lord.js, requires-body=true, max-size=-1, timeout=60
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/loidz207/test/refs/heads/main/js/deleteHeader1.js, timeout=60
+locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a\/.+, script-path=https://raw.githubusercontent.com/loidz207/test/refs/heads/main/js/Locket_Unlocked1.js, requires-body=true, max-size=-1, timeout=60
 #************************************#
 #RevenueCatVip
 
 #hostname = api.revenuecat.com
 
-RevenueCatVip = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/revenuecat.js, requires-body=true, max-size=-1, timeout=60
+RevenueCatVip = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/loidz207/test/refs/heads/main/js/revenuecat1.js, requires-body=true, max-size=-1, timeout=60
 
-#RevenueCatDeleteHeader = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/loidz207/LocketGold_byLord/refs/heads/main/js/deleteHeader.js, timeout=60
+#RevenueCatDeleteHeader = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/loidz207/test/refs/heads/main/js/deleteHeader1.js, timeout=60
 
 #************************************#
 [MITM]
